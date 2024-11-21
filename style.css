@@ -1,0 +1,451 @@
+/* Устанавливает шрифт страницы */
+body {
+    font-family: 'Inter', sans-serif; /* Основной шрифт — 'Inter', если он недоступен, используется запасной шрифт sans-serif */
+}
+
+/* Стили для раздела шапки страницы */
+.header-section {
+    position: relative; /* Устанавливает относительное позиционирование для правильного расположения внутренних элементов */
+    height: 500px; /* Задает высоту шапки, делает ее достаточно большой для визуального акцента */
+    background: url('./images/logo.JPG') center/cover no-repeat; /* Фоновое изображение для шапки */
+    /* 
+      - url('./images/logo.JPG'): Задает путь к фоновому изображению
+      - center: Центрирует изображение по горизонтали и вертикали
+      - cover: Масштабирует изображение, чтобы оно заполнило весь блок, обрезая края, если нужно
+      - no-repeat: Запрещает повторение изображения
+    */
+}
+
+
+/* Стили для наложения поверх фона в разделе шапки */
+.header-section .overlay {
+    position: absolute; /* Устанавливает абсолютное позиционирование для наложения, чтобы оно занимало весь родительский блок */
+    top: 0; /* Верхняя граница совпадает с верхом родительского блока */
+    left: 0; /* Левая граница совпадает с левым краем родительского блока */
+    right: 0; /* Правая граница совпадает с правым краем родительского блока */
+    bottom: 0; /* Нижняя граница совпадает с низом родительского блока */
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для затемнения (50% прозрачности), помогает выделить текст */
+}
+
+/* Стили для контента внутри шапки (например, заголовка и текста) */
+.header-content {
+    position: relative; /* Относительное позиционирование для возможности управления элементом без влияния на наложение */
+    z-index: 2; /* Устанавливает приоритет отображения поверх overlay (которая имеет меньший z-index), чтобы текст был виден */
+    top: 50%; /* Располагает элемент на середине родительского блока по вертикали */
+    transform: translateY(-50%); /* Сдвигает элемент вверх на половину его высоты, чтобы точно центрировать его вертикально */
+}
+
+
+@media (max-width: 767px) {
+    /* Выровнять nav-item по правому краю для мобильных устройств */
+    .nav-item {
+        margin-left: auto;
+    }
+
+    /* Выровнять кнопку nav-menu по правому краю для мобильных устройств */
+    .navbar-toggler {
+      margin-left: auto; /* Отодвигаем кнопку nav-menu на правый край */
+    }
+}
+
+/* Стили для заголовка в шапке */
+.header-title {
+    font-size: 4rem; /* Устанавливает крупный размер текста заголовка для выразительности */
+    font-family: 'Pinyon Script', cursive; /* Задает декоративный шрифт Pinyon Script для стилизованного отображения */
+}
+
+/* Стили для элементов навигации */
+.nav-item {
+    font-size: 20px; /* Задает размер шрифта для пунктов навигации, чтобы сделать их удобочитаемыми */
+}
+
+
+/* Медиа-запрос для устройств с шириной экрана 768px и более (планшеты и крупнее) */
+@media (min-width: 768px) {
+    /* Стили для заголовка в шапке на большом экране */
+    .header-title {
+        font-size: 5rem; /* Увеличивает размер текста заголовка для крупного экрана */
+    }
+
+    /* Стили для пунктов навигации на большом экране */
+    .nav-item {
+        font-size: 22px; /* Немного увеличивает размер текста для удобства чтения на большом экране */
+    }
+}
+
+@media (max-width: 767px) {
+    /* Выровнять кнопку по правому краю для мобильных устройств */
+    .navbar-toggler {
+      margin-left: auto; /* Отодвигаем кнопку на правый край */
+    }
+}
+
+
+/* Общий шрифт для страницы */
+body {
+    font-family: 'Inter', sans-serif; /* Основной шрифт "Inter" с запасным шрифтом sans-serif */
+}
+
+/* Более подробное объявление шрифтов для тела страницы */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Указывается список шрифтов с приоритетом от системного до "Helvetica Neue" для разных операционных систем */
+}
+
+/* Стили заголовка цитаты */
+.quote-title {
+    font-size: 50px; /* Устанавливает крупный размер шрифта для заголовка, чтобы он был заметным */
+}
+
+/* Стили для пунктов навигации */
+.nav-item {
+    font-size: 20px; /* Задает размер шрифта для навигационных пунктов, чтобы они были легко читаемыми */
+}
+
+
+/* Контейнер для секций, чтобы располагать их в колонку */
+.section-container {
+    display: flex; /* Использует flexbox для организации элементов внутри контейнера */
+    flex-direction: column; /* Располагает элементы вдоль вертикальной оси (колонка) */
+}
+
+
+
+
+/* Стили для секции с фоном и отступами */
+#links-section {
+    background: #f9f9f9;
+    padding: 60px 0;
+}
+
+/* Стилизация для заголовка */
+#links-section h1 {
+    font-size: 2rem /* Уменьшенный размер шрифта */ !important;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #000 !important; /* Черный цвет текста с использованием !important */
+    text-transform: uppercase;
+    margin-bottom: 30px !important;
+    font-size: 40px
+}
+
+
+/* Карточки для ссылок */
+.link-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0px
+}
+
+.link-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилизация ссылок внутри карточек */
+.link-card .card-body {
+    background: #fff;
+    padding: 20px;
+}
+
+.link-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.link-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.link-card:hover a {
+    opacity: 1;
+}
+
+/* Добавление эффектов наведения на ссылки */
+.link-card .card-title:hover {
+    color: #000000; 
+    text-decoration: underline;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.card {
+    flex: 0 0 30%;
+    min-width: 250px;
+}
+
+
+
+
+#table-section {
+    background: #f8f9fa; /* Светлый фон секции */
+    padding: 20px 20px /* Отступы */ !important;
+    border-radius: 15px; /* Скругленные углы для секции */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+#table-section h1 {
+    font-size: 2rem;
+    color: #000 !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px; /* Отступ сверху */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.table {
+    border-radius: 10px; /* Скругленные углы таблицы */
+    overflow: hidden;
+}
+
+.table th, .table td {
+    text-align: center; /* Центрируем содержимое ячеек */
+    vertical-align: middle;
+}
+
+.table thead {
+    background: #343a40; /* Темный фон для заголовка */
+    color: #fff; /* Белый текст для заголовка */
+}
+
+.table tbody tr:nth-child(even) {
+    background: #f8f9fa; /* Светлый фон для четных строк */
+}
+
+.table tbody tr:hover {
+    background: #e9ecef; /* Эффект при наведении */
+    cursor: pointer;
+}
+
+
+
+
+/* Стили для секции с таблицей */
+#table-section {
+    order: -1; /* Изменяет порядок отображения этой секции, ставя её в начало, если другие секции идут после */
+}
+
+
+
+#form-section {
+    background: #f8f9fa; /* Светлый фон */
+    padding: 40px 20px;
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
+  }
+  
+  .styled-form {
+    padding: 20px;
+    background: #ffffff; /* Белый фон формы */
+    border: 1px solid #ddd; /* Легкая рамка */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  }
+  
+  .styled-form .form-label {
+    font-weight: bold;
+    color: #000000 !important;
+  }
+  
+  .styled-form .form-control,
+  .styled-form .form-select {
+    border-radius: 5px; /* Скругленные поля ввода */
+    border: 1px solid #ddd; /* Легкая рамка */
+  }
+  
+  .styled-form .btn {
+    background-color: #444444 !important; /* Синий цвет кнопки */
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .styled-form .btn:hover {
+    background-color: #000000 !important;/* Темнее при наведении */
+  }
+  
+  h1.text-center {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000 !important;
+    margin-bottom: 20px;
+  }
+  
+
+
+/* Контейнер галереи */
+
+
+.headline-form{
+    margin-top: 35px;
+    font-weight: 700; /* Максимальная жирность текста */
+    font-size: 2rem; /* Размер текста (опционально, для акцента) */
+    text-align: center; /* Выравнивание по центру (если нужно) */
+    color: #000000 !important; /* Цвет текста (опционально) */
+}
+  
+
+
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+/* Контейнер слайдов */
+.slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+
+/* Слайды */
+.slide {
+    min-width: calc(100% / 3); /* На ПК показываем 3 слайда одновременно */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Стрелки навигации */
+.arrow {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+/* Пейджер */
+.pager {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-indicator {
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.page-indicator.active {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .slide {
+        min-width: 100%; /* На мобильных показываем 1 слайд */
+    }
+}
+
+
+
+
+
+/* Стили для формы мерча */
+#merch-form {
+    background-color: white; /* Белый фон формы */
+    padding: 20px; /* Внутренний отступ */
+    border-radius: 10px; /* Округленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для объема */
+    width: 300px; /* Ширина формы */
+    text-align: center; /* Центрирование текста */
+}
+
+.headline {
+    display: flex;              /* Используем Flexbox */
+    justify-content: center;    /* Центрируем по горизонтали */
+    align-items: center;        /* Центрируем по вертикали */
+    text-align: center;         /* Центрируем текст */
+    width: 100%;                /* Заполняем всю ширину родительского контейнера */
+    margin-top: 50px; 
+    color: #ffffff !important;
+}
+
+
+/* Стили для отображения результата */
+#result {
+    margin-top: 20px; /* Отступ сверху */
+    font-size: 18px; /* Размер шрифта */
+    color: #333; /* Темный цвет текста */
+    opacity: 0; /* Исходная прозрачность (скрыто) */
+    transform: scale(0.9); /* Уменьшенный начальный размер для анимации */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавный переход прозрачности и масштаба */
+}
+
+/* Стили для активного результата */
+#result.show {
+    opacity: 1; /* Полная видимость */
+    transform: scale(1); /* Полный размер (увеличен) */
+}
+
+
+/* Медиазапрос для экранов шириной 768px и выше */
+@media (min-width: 768px) {
+
+    /* Для .section-container изменяем display с flex на block */
+    .section-container {
+        display: block; /* Меняет поведение контейнера на блочное (обычно для мобильных устройств используется flex, а для более широких экранов можно использовать block) */
+        flex-direction: column; /* Это свойство не будет применяться, так как display: block отменяет flexbox, но оно указано для совместимости */
+    }
+
+    /* Увеличиваем размер шрифта для заголовка на устройствах с большим экраном */
+    .quote-title {
+        font-size: 60px; /* Устанавливаем размер шрифта для заголовка "quote-title" */
+    }
+
+    /* Увеличиваем размер шрифта для элементов навигации */
+    .nav-item {
+        font-size: 22px; /* Устанавливаем размер шрифта для элементов навигации */
+    }
+
+    #merch-form {
+        width: 500px;
+    }
+}

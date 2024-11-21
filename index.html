@@ -1,0 +1,352 @@
+<!DOCTYPE html> <!--Объявляет тип документа, определяя HTML5.-->
+<html lang="ru"> <!--Открывает тег html, задавая основной язык документа как русский (ru).-->
+<head>
+  <meta charset="UTF-8"> <!--Задает кодировку символов как UTF-8, поддерживая множество языков и символов.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Устанавливает настройки для адаптивности страницы на мобильных устройствах, масштабируя ее под размер экрана.-->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Осуществляет предварительное подключение к шрифтам, что ускоряет их загрузку.-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <!--Подключает шрифт Inter с Google Fonts.-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!--Подключает Bootstrap CSS для стилизации элементов и файл style.css для добавления собственных стилей.-->
+  <script src="scripts/calculator.js"></script>
+  <title>AЯRT</title> <!--Задает заголовок страницы, отображаемый в браузере.-->
+  <link rel = "icon" href = "./images/icon.jpg" type = "jpg/png"> <!--Задает иконку, отображаемую в браузере.-->
+</head>
+
+
+
+<!--Навигация в меню-->
+<body> <!-- Начало тела страницы -->
+    <nav class="navbar navbar-expand-lg bg-light navbar-light"> <!-- Навигационная панель с адаптивной шириной, светлым фоном и светлыми элементами -->
+      <div class="container"> <!-- Контейнер для центрирования содержимого навигации -->
+        
+        <!-- Кнопка для раскрытия навигационного меню на мобильных устройствах -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span> <!-- Иконка-кнопка для отображения иконки гамбургера -->
+        </button>
+        
+        <!-- Скрываемое меню навигации, разворачивающееся при нажатии кнопки на мобильных устройствах -->
+        <div class="collapse navbar-collapse" id="navmenu">
+          
+          <!-- Список навигационных элементов, выровненный по правому краю с помощью класса ms-auto -->
+          <ul class="navbar-nav ms-auto">
+            
+            <li class="nav-item"> <!-- Пункт меню -->
+              <a href="https://vk.com/anorllondo" class="nav-link">VK</a> <!-- Ссылка на VK с классом для стилизации -->
+              
+              <!-- Закомментированное изображение логотипа VK (можно использовать вместо текста ссылки) -->
+              <!-- <img class="navbar-logo" src="./images/вк.webp" alt=""> -->
+            </li>
+            
+            <li class="nav-item"> <!-- Пункт меню -->
+              <a href="https://www.instagram.com/rrimekisho/" class="nav-link">Instagram</a> <!-- Ссылка на Instagram -->
+              
+              <!-- Закомментированное изображение логотипа Instagram -->
+              <!-- <img class="navbar-logo" src="./images/яндекс.png" alt=""> -->
+            </li>
+            
+            <li class="nav-item"> <!-- Пункт меню -->
+              <a href="https://t.me/llikantropia" class="nav-link">Telegram</a> <!-- Ссылка на Telegram -->
+              
+              <!-- Закомментированное изображение логотипа Telegram -->
+              <!-- <img class="navbar-logo" src="./images/youtube.svg" alt=""> -->
+            </li>
+            
+          </ul> <!-- Конец списка навигационных элементов -->
+        </div> <!-- Конец скрываемого меню навигации -->
+      </div> <!-- Конец контейнера навигационной панели -->
+    </nav> <!-- Конец навигационной панели -->
+
+
+
+    <!-- Header -->
+    <header class="header-section"> <!-- Блок-заголовок для верхней части страницы с классом "header-section" для стилизации -->
+        <div class="overlay"></div> <!-- Полупрозрачный наложенный элемент, часто используемый для затемнения фона и улучшения контраста текста -->
+        
+        <!-- Контейнер для центрирования и стилизации содержимого заголовка, с выравниванием текста по центру и светлым цветом текста -->
+        <div class="container text-center text-light header-content">
+          
+          <!-- Заголовок первой степени с классами для стилизации: "display-4" увеличивает размер, "header-title" задает уникальные стили -->
+          <h1 class="display-4 header-title">AЯRT</h1>
+          
+          <!-- Параграф с описанием, используется класс "lead" для увеличенного шрифта, чтобы сделать текст выделяющимся -->
+          <p class="lead">"С тобой" уже на всех площадках!</p>
+        </div> <!-- Конец контейнера для содержимого заголовка -->
+    </header> <!-- Конец блока-заголовка -->
+
+    <section class="bg-black text-light"> <!-- Раздел секции с фоном черного цвета и светлым текстом для контраста -->
+        <div class="container"> <!-- Контейнер для центрирования и ограничения ширины содержимого секции -->
+          <h3 class="p-5 text-center">Мерч, клипы, треки - все в одном месте</h3> <!-- Заголовок 4-го уровня с отступами и центрированием текста -->
+        </div> <!-- Конец контейнера -->
+    </section> <!-- Конец секции -->
+
+
+
+    <div class="section-container"> 
+      <section class="bg-light p-10" id="links-section"> 
+          <div class="container"> 
+              <div class="row justify-content-center">
+                  <div class="col-lg-10 text-center"> 
+                      <h1 class="display-4 mb-4 text-primary">Музыкальные Видео</h1> 
+                      <div class="card-deck">
+                          <!-- Ссылки как карточки с эффектами наведения -->
+                          <div class="card link-card">
+                              <div class="card-body">
+                                  <h5 class="card-title">Акварели</h5>
+                                  <a class="stretched-link" href="./soon/Акварели/Акварели.html" title="Акварели"></a>
+                              </div>
+                          </div>
+                          <div class="card link-card">
+                              <div class="card-body">
+                                  <h5 class="card-title">От любви до ненависти</h5>
+                                  <a class="stretched-link" href="./soon/От любви до ненависти/От любви до ненавести.html" title="От любви до ненависти"></a>
+                              </div>
+                          </div>
+                          <!-- Можно добавить другие ссылки в аналогичном формате -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+  
+
+
+
+    <!-- Table -->
+    <section class="bg-light p-5" id="table-section">
+      <hr class="border border-dark border-2 opacity-50">
+      <div class="container"> 
+          <div class="row justify-content-center">
+              <div class="col-lg-8 col-md-10">
+                  <h1 class="text-center mb-4 text-primary">Прослушивания</h1> 
+                  <div class="table-responsive"> 
+                      <table class="table table-hover table-striped table-bordered align-middle rounded">
+                          <thead class="table-dark text-center">
+                              <tr>
+                                  <th scope="col">Релиз</th>
+                                  <th scope="col">VK Музыка</th>
+                                  <th scope="col">Яндекс Музыка</th>
+                                  <th scope="col">Apple Music</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <th scope="row">С тобой</th>
+                                  <td>10,243</td>
+                                  <td>12,504</td>
+                                  <td>3,941</td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">Акварели</th>
+                                  <td>8,843</td>
+                                  <td>10,321</td>
+                                  <td>1,921</td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">Снова</th>
+                                  <td>8,319</td>
+                                  <td>9,981</td>
+                                  <td>1,509</td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">От любви до ненависти</th>
+                                  <td>9,832</td>
+                                  <td>11,321</td>
+                                  <td>2,543</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+      
+     
+<!-- Секция формы -->
+<section class="bg-light p-4" id="form-section">
+  <hr class="border border-dark border-2 opacity-50">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <h1 class="text-center pb-3">ФОРМА</h1>
+        <form action="submitURL" method="POST" class="styled-form">
+          <!-- ФИО -->
+          <div class="mb-3">
+            <label for="name" class="form-label">ФИО:</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Иванов Иван Иванович" required>
+          </div>
+          
+          <!-- Телефон -->
+          <div class="mb-3">
+            <label for="phone" class="form-label">Телефон:</label>
+            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7-(***)-***-**-**" required>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail:</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="example@mail.com" required>
+          </div>
+
+          <!-- Дата рождения -->
+          <div class="mb-3">
+            <label for="birthdate" class="form-label">Дата рождения:</label>
+            <input type="date" id="birthdate" name="birthdate" class="form-control" required>
+          </div>
+
+          <!-- Пол -->
+          <div class="mb-3">
+            <label class="form-label">Пол:</label>
+            <div class="form-check">
+              <input type="radio" id="male" name="gender" value="male" class="form-check-input">
+              <label for="male" class="form-check-label">Мужской</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" id="female" name="gender" value="female" class="form-check-input">
+              <label for="female" class="form-check-label">Женский</label>
+            </div>
+          </div>
+
+          <!-- Любимый трек -->
+          <div class="mb-3">
+            <label for="languages" class="form-label">Любимый трек:</label>
+            <select id="languages" name="languages" class="form-select" multiple>
+              <option value="C">С тобой</option>
+              <option value="C++">Снова</option>
+              <option value="JavaScript">Акварели</option>
+              <option value="PHP">От любви до ненависти</option>
+              <option value="Python">Танец воспоминаний</option>
+              <option value="Java">Ладони говорят за нас</option>
+              <option value="Haskell">ЕГЭ</option>
+            </select>
+          </div>
+
+          <!-- Биография -->
+          <div class="mb-3">
+            <label for="bio" class="form-label">Биография:</label>
+            <textarea id="bio" name="bio" class="form-control" rows="4" placeholder="Расскажите немного о себе..."></textarea>
+          </div>
+
+          <!-- Контракт -->
+          <div class="mb-3 form-check">
+            <input type="checkbox" id="contract" name="contract" class="form-check-input">
+            <label for="contract" class="form-check-label">С контрактом ознакомлен(а)</label>
+          </div>
+
+          <!-- Кнопка -->
+          <button type="submit" class="btn btn-primary w-100">Сохранить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      <!-- slider div -->
+    <section class="section-padding bg-light" style="padding-bottom: 200px; overflow: hidden">
+      <hr class="border border-dark border-2 opacity-50">
+      <h1 class="headline-form pb-4" data-aos="fade-up">ГАЛЕРЕЯ ВДОХНОВЕНИЯ</h1>
+      <div class="slider-container">
+        <button class="arrow left" id="prevBtn">←</button>
+        <div class="slider" id="slider">
+            <div class="slide"><img src="./images/СКРИПТОНИТ.JPG" alt="Image 1"></div>
+            <div class="slide"><img src="./images/TYLER.JPG" alt="Image 2"></div>
+            <div class="slide"><img src="./images/МЧТ_1.JPG" alt="Image 3"></div>
+            <div class="slide"><img src="./images/ЛАМПАБИКТ.JPG" alt="Image 4"></div>
+            <div class="slide"><img src="./images/WEEKEND.JPG" alt="Image 5"></div>
+            <div class="slide"><img src="./images/СТРЫКАЛО.JPG" alt="Image 6"></div>
+            <div class="slide"><img src="./images/МЧТ_2.JPG" alt="Image 7"></div>
+            <div class="slide"><img src="./images/T-FEST.JPG" alt="Image 8"></div>
+        </div>
+        <button class="arrow right" id="nextBtn">→</button>
+    </div>
+    <div class="pager" id="pager">
+        <span class="page-indicator" data-page="1">1</span>
+        <span class="page-indicator" data-page="2">2</span>
+        <span class="page-indicator" data-page="3">3</span>
+    </div>
+    <script src="./scripts/sliderWrapper.js"></script>
+    </section>
+
+
+
+
+    <!-- Раздел для мерча -->
+    <section class="section-padding bg-black">
+        <div class="container" data-aos="fade-up" data-aos-anchor-placement="top-center">
+            <div class="row text-start">
+                <!-- Заголовок раздела -->
+                <h1 class="headline pb-5 text-white">ПРИОБРЕТАЙТЕ МЕРЧ</h1>
+    
+                <div class="col-lg">
+                    <form class="mx-auto" id="merch-form">
+  
+            <!-- Выпадающий список для выбора товара -->
+            <div class="mb-3">
+              <label for="product" class="form-title text-black">Выберите мерч</label>
+              <select id="product" name="product" class="form-control">
+                <!-- Пункты списка с ценой и ссылкой на локальные изображения товаров -->
+                <option value="4500" data-image="./images/худи.png">Зип-худи "AЯRT" — 4500Р</option>
+                <option value="3500" data-image="./images/лонгслив.png">Лонгслив "AЯRT" — 3500Р</option>
+                <option value="2000" data-image="./images/футболка.png">Футболка "AЯRT" — 2000Р</option>
+              </select>
+            </div>
+  
+            <!-- Поле ввода для указания количества товара -->
+            <div class="mb-3">
+              <label for="quantity" class="form-title text-black">Количество товара</label>
+              <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Введите количество">
+            </div>
+  
+            <!-- Контейнер для изображения товара, с анимацией появления -->
+            <div class="image-container mb-4" data-aos="fade-in">
+              <!-- Динамически изменяемое изображение выбранного товара -->
+              <img id="product-image" class="img-fluid" src="./images/худи.png" alt="Изображение товара">
+            </div>
+  
+            <!-- Кнопка для расчета стоимости -->
+            <button id="calculate" class="btn btn-primary">Рассчитать стоимость</button>
+  
+            <!-- Поле для отображения результата расчета -->
+            <p id="result" class="mt-3"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const productSelect = document.getElementById('product');
+      const productImage = document.getElementById('product-image');
+  
+      // Изменение изображения при выборе товара
+      productSelect.addEventListener('change', function() {
+        const selectedOption = productSelect.options[productSelect.selectedIndex];
+        const imageSrc = selectedOption.getAttribute('data-image'); // получаем путь к изображению из атрибута data-image
+        productImage.src = imageSrc; // меняем src изображения на выбранное
+      });
+    });
+  </script>
+  
+
+
+      <!-- Footer -->
+      <footer class="bg-black py-4 mt-0"> <!-- Тег <footer> задает нижнюю часть страницы с темным фоном, отступами сверху и снизу (py-4) и отступом сверху (mt-4) -->
+        <div class="container text-light text-center"> <!-- Контейнер Bootstrap для центрирования и выравнивания текста по центру с использованием светлого текста -->
+          <p class="display-5 mb-3">AЯRT</p> <!-- Текст "ART" крупным шрифтом благодаря классу display-5 с нижним отступом (mb-3) -->
+          <small class="text-white-50">&copy; Ofical</small> <!-- Надпись о копирайте, уменьшенная и полупрозрачная (text-white-50) -->
+        </div>
+      </footer>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+      <!-- Подключение Bootstrap JavaScript с проверкой целостности и анонимным доступом для использования интерактивных компонентов -->
+</body>
+</html>
+      
